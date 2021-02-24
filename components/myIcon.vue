@@ -1,5 +1,5 @@
 <template>
-	<text class="iconfont" :class="[iconId, iconColor]" :style="{fontSize:`${iconSize}rpx`}"></text>
+	<text class="iconfont" :class="[iconId, iconColor]" :style="{fontSize:`${iconSize}rpx`}" @tap="myClick"></text>
 </template>
 
 <script>
@@ -19,7 +19,9 @@
 			}
 		},
 		methods: {
-			
+			myClick() {
+				this.$emit('my-click')
+			}
 		},
 	}
 </script>
